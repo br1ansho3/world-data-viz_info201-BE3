@@ -1,0 +1,39 @@
+---
+title: "Small Countries are beautiful"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(knitr)
+knitr::opts_chunk$set(echo = F)
+source("Chart#2.R")
+```
+
+#Summary 
+
+```{r}
+raw <- read.csv("data/WDVP Datasets - small countries are beautiful.csv", stringsAsFactors = FALSE)
+data_set <- raw[5:76, ]
+
+```
+Even though varies in shapes and sizes, small nations are showing fascinating trends and discoveries for investigation. In this [dataset](https://docs.google.com/spreadsheets/d/11LhOlwsloUuA495r-04IDwciMqNrLwWGpveqpF61WXU/edit#gid=1246185258), we analyzed the dataset from the _76 countries_ about their economic situation, life standards and also population distribution. 
+
+
+
+#Chart 1: Foreign immigrants analysis
+
+
+
+#Chart 2: Health expenditure analysis
+For the second chart, we analyzed the relationship between the *health expenditure* and the *human development index* for 2017 in the 76 countries. The country name and the value of human development index, the health expenditure would be shown by clicking on the bar interested. 
+
+```{r}
+data_set <- read.csv("data/WDVP Datasets - small countries are beautiful.csv", stringsAsFactors = FALSE, na.strings = "-")
+
+chart_two <- get_second_chart(data_set)
+chart_two
+
+```
