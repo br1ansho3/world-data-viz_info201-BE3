@@ -1,13 +1,6 @@
 library(ggplot2)
 library(dplyr)
 library(plotly)
-library(styler)
-library(lintr)
-# Read in csv file for Chart #1
-dataframe_choice <- read.csv(
-  "data/WDVP Datasets - small countries are beautiful.csv",
-  stringsAsFactors = F, na.strings = "-"
-)
 
 # Getting Rid of Column Names
 gdp_area_vs_foreign_born <- function(dataframe_choice) {

@@ -2,14 +2,6 @@
 #Are any outlier countries worth our attention?
 #Can we learn anything from the trends and patterns of these dataset?
 #Do these countries derive power from their agility? Or is innovation more risky?
-library(lintr)
-
-small_countries_df <- read.csv(
-  "data/WDVP Datasets - small countries are beautiful.csv",
-  stringsAsFactors = F, na.strings = "-")
-
-#remove first 4 rows
-small_countries_df <- small_countries_df[5:nrow(small_countries_df), ]
 
 #basic information 
 #format: basic_info$feature$max$value
@@ -44,3 +36,4 @@ summarize_information <- function(df) {
                        num_complete = num_complete)
   values
 }
+
