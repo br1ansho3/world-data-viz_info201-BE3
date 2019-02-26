@@ -10,9 +10,9 @@ library(plotly)
 library(knitr)
 library(lintr)
 knitr::opts_chunk$set(echo = F)
-source("analysis.R")
-source("Chart#1.R")
-source("Chart#2.R")
+source("scripts/analysis.R")
+source("scripts/Chart#1.R")
+source("scripts/Chart#2.R")
 ```
 
 Even though varies in shapes and sizes, small nations are showing fascinating trends and discoveries for investigation. In this [dataset](https://docs.google.com/spreadsheets/d/11LhOlwsloUuA495r-04IDwciMqNrLwWGpveqpF61WXU/edit#gid=1246185258), we analyzed the dataset from the _76 countries_ about their economic situation, life standards and also population distribution. 
@@ -21,7 +21,7 @@ Even though varies in shapes and sizes, small nations are showing fascinating tr
 
 ```{r}
 small_countries_df <- read.csv(
-  "data/WDVP Datasets - small countries are beautiful.csv",
+  "scripts/data/WDVP Datasets - small countries are beautiful.csv",
   stringsAsFactors = F, na.strings = "-")
 
 small_countries_df <- small_countries_df[5:nrow(small_countries_df), ]
@@ -74,7 +74,7 @@ For the first graph, we investigated the relationship between the *GDP* and the 
 
 ```{r message=FALSE}
 dataframe_choice <- read.csv(
-  "data/WDVP Datasets - small countries are beautiful.csv",
+  "scripts/data/WDVP Datasets - small countries are beautiful.csv",
   stringsAsFactors = F, na.strings = "-")
 
 chart_one <- gdp_area_vs_foreign_born(dataframe_choice)
@@ -85,7 +85,7 @@ chart_one
 For the second chart, we analyzed the relationship between the *health expenditure* and the *human development index* for 2017 in the 76 countries. The country name and the value of human development index, the health expenditure would be shown by clicking on the bar interested. 
 
 ```{r}
-data_set <- read.csv("data/WDVP Datasets - small countries are beautiful.csv", stringsAsFactors = FALSE, na.strings = "-")
+data_set <- read.csv("scripts/data/WDVP Datasets - small countries are beautiful.csv", stringsAsFactors = FALSE, na.strings = "-")
 
 chart_two <- get_second_chart(data_set)
 chart_two
