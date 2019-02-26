@@ -3,7 +3,7 @@ library(dplyr)
 library(plotly)
 library(styler)
 library(lintr)
-# Read in csv file for Chart 1
+# Read in csv file for Chart #1
 dataframe_choice <- read.csv(
   "data/WDVP Datasets - small countries are beautiful.csv",
   stringsAsFactors = F, na.strings = "-"
