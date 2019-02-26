@@ -32,7 +32,7 @@ In this dataset, we find the maximum and minimum and also the average for the an
 
 1. `r list_max_min$population$max$indicator[1]` , `r list_max_min$population$max$indicator[2]` and `r list_max_min$population$max$indicator[3]` have the biggest population among the 76 countries, which is `r list_max_min$population$max$population[1]`. `r list_max_min$population$min$indicator[1]`, `r list_max_min$population$min$indicator[2]`, `r list_max_min$population$min$indicator[3]`, `r list_max_min$population$min$indicator[4]`, `r list_max_min$population$min$indicator[5]` and `r list_max_min$population$min$indicator[6]` have the smallest population, which is `r list_max_min$population$min$population[1]`. The average population among the countries is `r list_max_min$population$avg`. 
 
-2. `r list_max_min$GDP$max$indicator[1]` has the highest total GDP as `r list_max_min$GDP$max$GDP[1]`. `r list_max_min$GDP$min$indicator[1]`has the lowest total GDP as `r list_max_min$GDP$min$GDP[1]`. The average total GDP is `r list_max_min$GDP$avg`
+2. `r list_max_min$GDP$max$indicator[1]` has the highest total GDP as `r list_max_min$GDP$max$GDP[1]`. `r list_max_min$GDP$min$indicator[1]`has the lowest total GDP as `r list_max_min$GDP$min$GDP[1]`. The average total GDP is `r list_max_min$GDP$avg`. 
 
 3. `r list_max_min$GDP.1$max$indicator[1]` has the highest total GDP as `r list_max_min$GDP.1$max$GDP[1]`. `r list_max_min$GDP.1$min$indicator[1]`has the lowest total GDP as `r list_max_min$GDP.1$min$GDP[1]`. The average total GDP is `r list_max_min$GDP.1$avg`. 
 
