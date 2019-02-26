@@ -19,21 +19,23 @@ find_metadata <- function(df, feature) {
     mutate_(feature = gsub(",", "", feature))
   specific_table[ , feature] <- as.numeric(specific_table[ , feature])
   
-  max <- specific_table %>% 
-    filter_(feature == max(feature, na.rm = TRUE))
+  max <- specific_table[na.omit(specific_table[, feature]) == 
+                          max(specific_table[, feature], na.rm = TRUE), ] 
   
   #returns the vector of the values of the feature and the country
   #returns list max/avg/min with list of country/value
 }
-find_metadata(small_countries_df, "GDP")
+print(find_metadata(small_countries_df, "GDP"))
 
 #countries that have a complete dataset
 complete_rows <- complete.cases(small_countries_df)
 complete_small_countries <- small_countries_df[complete_rows, "indicator"]
 
+
+
+
+#TESTING AREA
 hi <- "GDP"
-small_countries_df %>% 
-  select_(hi)
 specific_table <- small_countries_df %>% 
   select_("indicator", hi) %>% 
   mutate_("GDP" = gsub(",", "", hi)) 
@@ -42,5 +44,6 @@ max <- specific_table %>%
   
   filter_("GDP" == max(GDP, na.rm = TRUE))
 # comparison 
+specific_table[na.omit(specific_table[,hi]) ==max(specific_table[, hi], na.rm = TRUE),]
 specific_table[na.omit(specific_table[, hi]) == max(specific_table[, hi], na.rm = TRUE),] 
-filter_(specific_table, hi == paste0("max(", hi, ", na.rm = TRUE)"))
+filter_(specific_table, hi == paste0("max(", hi, ", na.rm = TRUE)")) #doesn't work
