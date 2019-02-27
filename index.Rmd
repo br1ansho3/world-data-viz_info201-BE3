@@ -20,11 +20,11 @@ Even though varies in shapes and sizes, small nations are showing fascinating tr
 #Summary 
 
 ```{r}
-small_countries_df <- read.csv(
+raw <- read.csv(
   "scripts/data/WDVP Datasets - small countries are beautiful.csv",
   stringsAsFactors = F, na.strings = "-")
 
-small_countries_df <- small_countries_df[5:nrow(small_countries_df), ]
+small_countries_df <- raw[5:nrow(raw), ]
 list_max_min <- summarize_information(small_countries_df)
 options("scipen"=100, "digits"=4)
 ```
@@ -74,7 +74,7 @@ For the first graph, we investigated the relationship between the *GDP* and the 
 
 ```{r message=FALSE}
 
-chart_one <- gdp_area_vs_foreign_born(small_countries_df)
+chart_one <- gdp_area_vs_foreign_born(raw)
 chart_one
 ```
 
@@ -83,7 +83,7 @@ For the second chart, we analyzed the relationship between the *health expenditu
 
 ```{r}
 
-chart_two <- get_second_chart(small_countries_df)
+chart_two <- get_second_chart(raw)
 chart_two
 
 ```
