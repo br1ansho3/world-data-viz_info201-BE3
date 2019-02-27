@@ -73,11 +73,8 @@ In this dataset, we find the maximum and minimum and also the average for the an
 For the first graph, we investigated the relationship between the *GDP* and the *foreign immigrants* in the 76 countries. The country name could be shown by clicking on the responding dots. 
 
 ```{r message=FALSE}
-dataframe_choice <- read.csv(
-  "scripts/data/WDVP Datasets - small countries are beautiful.csv",
-  stringsAsFactors = F, na.strings = "-")
 
-chart_one <- gdp_area_vs_foreign_born(dataframe_choice)
+chart_one <- gdp_area_vs_foreign_born(small_countries_df)
 chart_one
 ```
 
@@ -85,9 +82,8 @@ chart_one
 For the second chart, we analyzed the relationship between the *health expenditure* and the *human development index* for 2017 in the 76 countries. The country name and the value of human development index, the health expenditure would be shown by clicking on the bar interested. 
 
 ```{r}
-data_set <- read.csv("scripts/data/WDVP Datasets - small countries are beautiful.csv", stringsAsFactors = FALSE, na.strings = "-")
 
-chart_two <- get_second_chart(data_set)
+chart_two <- get_second_chart(small_countries_df)
 chart_two
 
 ```
